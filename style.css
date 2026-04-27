@@ -1,0 +1,40 @@
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font-size: 110%;
+}
+.headerList {
+    list-style-type: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 35px;
+}
+#header {
+    display: inline-flex;
+    gap: 20px;
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+.faq-selected {
+    color: yellowgreen;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+.content-text {
+    display: flex; 
+    padding: 50px; 
+    width: 25%; 
+    margin: 0 auto; 
+    text-align: left;
+}
+li {
+    cursor: pointer;
+}
