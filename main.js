@@ -1,3 +1,25 @@
+function openMenu () {
+    mainMenu.classList.toggle('hidden');
+    btnOpenMenu.classList.toggle('hidden');
+    btnCloseMenu.classList.toggle('hidden');
+}
+function closeMenu () {
+    mainMenu.classList.toggle('hidden');
+    btnOpenMenu.classList.toggle('hidden');
+    btnCloseMenu.classList.toggle('hidden');
+}
+function showfaq () {
+    faq.classList.toggle('hidden');
+}
+/*function about () {
+    rightsreserved.classList.toggle('hidden');
+    aboutComment.classList.toggle('hidden');
+    logo.classList.toggle('hidden');
+    username.classList.toggle('hidden');
+}*/
+function why () {
+    whywe.classList.toggle('hidden');
+}
 function faq1 () {
     console.log('Вы открыли детали 1го вопроса.');
     answerOne.classList.toggle('hidden');
