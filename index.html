@@ -2,35 +2,68 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
         <title>Сервис на колено</title>
     </head>
 <body>
-    <div style="width: 100%; overflow: hidden;">
-        <ul>
-            <li><a href="">Авито</a></li>
+<div class="container">
+    <!--МЕНЮ--><div class="left">
+        <p style="color: yellowgreen;"><b>Сервис на колено</b> (бета)</p>
+        <button onclick="openMenu()" id="btnOpenMenu">Развернуть список / меню</button>
+        <ul class="hidden" id="mainMenu">
+            <li><a href="https://www.avito.ru/brands/ac9ee2c8d5f42ed9bb76151bc9bff9c3?src=sharing">Авито</a></li>
             <li><a href="">Ремонт</a></li>
             <li><a href="">Прошивка</a></li>
             <li><a href="">Документация</a></li>
+            <li><a href="">Я продаю</a></li>
+            <li><a href="">Я покупаю</a></li>
+            <li><a href="">Наши разработки</a></li>
+            <li><a href="">Вступить в ряды SNK</a></li>
+            <li><a href="">Сообщить об ошибке</a></li>
         </ul>
+        <button class="hidden" onclick="closeMenu()" id="btnCloseMenu">Свернуть список / меню</button>
     </div>
     <hr style="opacity: 0.3;">
-    <div id="content">
-        <h3>Часто задаваемые вопросы:</h3>
-        <ol class="faq">
+<!--ЦНТР--><div class="center">
+        <h3 onclick="why()" style="cursor: pointer;">Почему стоит выбрать "Сервис на колено"?</h3>
+        <p class="hidden" id="whywe">Мы считаем, что нужно выбрать именно наш сервис, потому что мы предоставляем качественные услуги, оперативно выходим на связь, а так же оказываем помощь и поддержку как нашим покупателям, так и тем, кто доверил нам свои гаджеты на ремонт.</p>
+    </div>
+    <div>
+        <h3 onclick="showfaq()" style="cursor: pointer;">Часто задаваемые вопросы</h3>
+        <ol id="faq" class="hidden" class="faq">
             <li id="faqOne" onclick="faq1()">Как осуществляете сделки?</li>
                 <p id="answerOne" class="hidden">Для начала Вы с нами связываетесь любым удобным для Вас способом. Если вы из г. Великие Луки, то встретиться можно лично, чтобы обсудить детали сделки. Если же вы из другого города/страны, то можем проконсультироваться дистанционно. <br><br>В случае, если вы из г. Великие Луки, вы можете сразу в руки отдать свой девайс, и, в случае, если Вы отдали нам ремонтировать своё устройство, через некоторое время мы с Вами снова свяжемся, чтобы мы смогли обсудить время, когда вы сможете забрать обратно свой девайс. Иначе, если Вы из другого города/страны, отправка девайса в обе стороны реализуется через доставку.</p>
             <li id="faqTwo" onclick="faq2()">Я хочу с вами связаться. Как мне это сделать?</li>
-                <p id="answerTwo" class="hidden">Связаться с нами можно, написав в сообщения в <a><b>группу ВК</b></a>, или позвонив по номеру: <a href="tel:+79969471187"><b>+79969471187</b></a></p>
+                <p id="answerTwo" class="hidden">Связаться с нами можно, написав в сообщения в <a href="https://vk.ru/ser_vl60"><b>группу ВК</b></a>, или позвонив по номеру: <a href="tel:unlnown"><b>unknown</b></a></p>
             <li id="faqThree" onclick="faq3()">Хочу вступить в команду "Сервис на колено". Что мне для этого потребуется?</li>
-                <p id="answerThree" class="hidden">Для того, чтобы вступить в нашу команду, Вам необходимо сначала сообщить это в <a href=""><b>нашем сообществе ВК</b></a>. Укажите, какую роль вы хотите играть в нашей команде, будь то специалист по гаджетам, программист или WEB-разработчик. Будем рады каждому!</p>
+                <p id="answerThree" class="hidden">Для того, чтобы вступить в нашу команду, Вам необходимо сначала сообщить это в <a href="https://vk.ru/ser_vl60"><b>нашем сообществе ВК</b></a>. Укажите, какую роль вы хотите играть в нашей команде, будь то специалист по гаджетам, программист или WEB-разработчик. Будем рады каждому!</p>
             <li id="faqFour" onclick="faq4()">Есть ли у вас какие-либо гарантии?</li>
                 <p id="answerFour" class="hidden">!!! МЫ НЕ НЕСЁМ ОТВЕТСТВЕННОCТИ за возможные поломки во время ремонта. Если вы очень переживаете, что с вашим девайсом что-то случится, мы всегда готовы быть рядом. В случае неуспешного ремонта/прошивки или к.-н. др. операции над вашим девайсом, будет обговорена компенсация.</p>
             <li id="faqFive" onclick="faq5()">Где мне ознакомиться с вашими полными условиями?</li>
                 <p id="answerFive" class="hidden">Ознакомиться с документацией и другими необходимами справочниками и документами Вы можете <a href=""><b>тут, по ссылке.</b></a></p>
         </ol>
+    </div>
+    <div>
+        <h3 onclick="about()" style="cursor: pointer;">О сервисе</h3>
+        <p id="rightsreserved" style="opacity: 0.5; user-select: none;">Сервис на колено, 2026. All Rights Reserved.</p>
+        <p id="aboutComment" style="opacity: 0.11">Данный сайт является разработкой SNK.dev</p>
+        <img src="source/snkdevlogo.svg" id="logo" style="width: 200px; height: auto;">
+        <p id="username" style="opacity: 0.7;"><a href="https://vk.ru/ser_vl60">@ser_vl60</a></p>
+    </div>
+<!--ПРВО--><div class="right" id="wall">
+        <h2>Наши последние обновления:</h2>
+        <script type="text/javascript" src="https://vk.ru/js/api/openapi.js?168"></script>
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+          VK.Widgets.Group("vk_groups", {mode: 2, wide: 10, height: 400, color1: "2D2D2D", color2: "ffffff", color3: "9ACD32"}, 235553883);
+        </script>
+    </div>
+    </div>
+<!--СООБ--><div style="display: block">
+        <p style="opacity: 0.3;">Мы знаем, что мобильная версия открывается как десктопная. Извините, так задумано:))</p>
+        <p style="opacity: 0.3;">p.s. надеемся, что найдем человека, который будет помогать с работой над сайтом.</p>
     </div>
 </body>
 </html>
